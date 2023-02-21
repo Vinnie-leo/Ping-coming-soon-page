@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a0c0f11a16.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+    <title>Ping.</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.svg">
+        <h1>We are launching <span>soon!</span></h1>
+        <p>Subscribe and get notified</p>
+    </header>
+
+    <form>
+        <input class ="useremail" type="text" name="email" id="email" value ="" placeholder="example@email.com">
+        <p class="error"></p>
+        <button>Notify Me</button>
+    </form>
+
+    <img class="body-img" src="images/illustration-dashboard.png">
+
+    <footer>
+        <div class="social-media">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>Copyright Ping. All right reserved.</p>
+
+    </footer>
+
+    <script>
+          function checkEmail(){
+            if (email.value.length == 0 ){
+                error.innerHTML="Please enter your email address";
+                email.style.border = 'solid 3px red';
+
+            }
+            else{
+                error.innerHTML='';
+                email.style.border="solid 3px green";
+            }
+        }
+        const email = document.querySelector(".useremail");
+        const error = document.querySelector(".error");
+        email.addEventListener('focusout',checkEmail);
+
+      
+
+    </script>
+
+    
+</body>
+</html>
